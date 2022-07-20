@@ -10,6 +10,10 @@ body {
 
 }
 
+img {
+    max-width: 100%;
+}
+
 h3 {
     margin: 0;
 }
@@ -18,15 +22,19 @@ h3 {
 header {
     background: #f8f8f8;
     padding: 2em 0;
+    text-align: center;
 }
 
 .container {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
+    align-items: center;
+}
+
+.container-flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 
@@ -35,8 +43,10 @@ header {
     font-weight: 400;
     color: #143774;
     font-size: 2rem;
-    margin: 0
+    margin: 0;
+    
 }
+
 
 nav ul {
     list-style: none;
@@ -206,7 +216,7 @@ main {
 
 footer {
     width: 100%;
-    height: 120px;
+    height: 100px;
     background: #303A52;
     color: #FC85AE;
     display: flex;
@@ -214,13 +224,13 @@ footer {
     justify-content: center;
     text-align: center;
     font-weight: 800;
+    font-size: 0.8rem;
+    
 }
 
 footer p {
-    font-size: 1rem;
     margin: 0;
     opacity: 0.6;
-    font-weight: 800;
     margin-bottom: 0.5em;
 }
 
@@ -250,50 +260,55 @@ footer a:hover {
 .footer-div img {
     width: 2.4%;
     opacity: 0.5;
-    background: #f09433; 
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
 }
 
+@media (max-width: 675px) {
 
-@media (max-width:800px) {
+    .container-flex {
+        flex-direction: column;
+    }
+
     .gallery {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
-        place-items: center;
     }
 
     .about-us {
-        font-size: 12px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: #1792D2;
-        display: inline-block;
         width: 90%;
     }
 
     .span {
-        border-bottom: 1px dashed #303A52;
         width: 90%;
-        margin: 1em auto;
-        display: flex;
-        opacity: 0.5;
     }
 
-    .container {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    nav li {
+        margin-left: 0.7em;
     }
 
-    .container h1 {
-        margin-left: 1.5em;
+    nav a {
+        letter-spacing: 0;
     }
-
-
+    .title{
+        font-size: 1.7rem;
+    }     
+    body {
+        font-size: 0.9rem;
+    }
+    .container{
+        width: 100%;
+    }
+    .about-us{
+        font-size:10px;
+    }
+    .carousel p{
+        font-size: 0.8rem;
+    }
+    .carousel{
+        padding: 0 10px;
+    }
 }
