@@ -35,6 +35,7 @@ header {
 .container-flex {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 
 
